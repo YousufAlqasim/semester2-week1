@@ -9,4 +9,4 @@
 -- 2. Load this script: .read example.sql
 -- 3. Exit SQLite: .exit
 
-Select * FROM countries
+SELECT Country, Continent from countries;
