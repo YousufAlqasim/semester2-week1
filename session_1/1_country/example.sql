@@ -9,4 +9,4 @@
 -- 2. Load this script: .read example.sql
 -- 3. Exit SQLite: .exit
 
-SELECT Country, Continent from countries;
+SELECT Country FROM countries WHERE Continent LIKE ‘%America%’;
