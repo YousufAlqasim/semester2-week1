@@ -10,4 +10,4 @@
 -- 3. Exit SQLite: .exit
 
     
-SELECT Country WHERE Continent LIKE "%Bah%";
+SELECT Country from countries WHERE Continent LIKE "%America";
