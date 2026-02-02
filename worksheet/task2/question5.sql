@@ -2,8 +2,8 @@
 -- Expected Columns:
 -- StudentId, FirstName, LastName, TotalCreditsPassed
 
-SELECT s.StudentId, s.FirstName, s.LastName, SUM(CASE WHEN e.Grade >= 40 THEN c.Credits ELSE 0 END) as TotalCreditsPassed
+SELECT s.StudentId, s.FirstName, s.LastName, SUM(c.Credits) as TotalCreditsPassed
 FROM Student s JOIN Enrolment e ON s.StudentId = e.StudentId
-JOIN Course c ON e.CourseId = c.CourseId
-GROUP BY s.StudentId, s.FirstName, s.LastName
+JOIN Course c ON e.CourseId = c.CourseId WHERE e.Grade >= 40
+GROUP BY s.StudentId, s.FirstName, s.LastName;
 
